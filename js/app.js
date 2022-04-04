@@ -55,10 +55,7 @@ let rightAns = "";
 
 const optionClicked = (e)=>{
     if(answer){
-        let wrong = Array.from(document.getElementsByClassName(rightAns))
-        wrong.forEach(el=>{
-            el.style="background-color: white";
-        })   
+        answer.style="background-color: white"; 
     }
     e.target.style ="background-color:#0fa0c5;"
     answer =e.target;
@@ -66,25 +63,24 @@ const optionClicked = (e)=>{
     rightAns =e.target.className.split(" ")[1]
     
 }
-const correctAudio = new Audio();
-const wrongAudio = new Audio()
+// const correctAudio = new Audio();  
+// const wrongAudio = new Audio()
 const answerClicked =(e)=>{
-    e.target.innerHTML = `<p>${answerPicked}</p>`;
-    console.log(rightAns === "correct")
-    if(rightAns === "correct"){
-        setTimeout(()=>{e.target.innerHTML += '<img class="true" src="./assets/images/tikMark-small.png">'},1000)
-        // correctAudio.play()
-        answer.style ="visibility:hidden"
-        answerPicked = " ";
-        answer="";
-    }else{
-        setTimeout(()=>{e.target.innerHTML += '<img class="false" src="./assets/images/crossMark-small.png">'},500)
-        setTimeout(()=>{e.target.innerHTML = " "},1500)
-        // wrongAudio.play()
-        let wrong = Array.from(document.getElementsByClassName(rightAns))
-        wrong.forEach(el=>{
-            el.style="background-color: white";
-        })
+    if(answer){
+        e.target.innerHTML = `<p>${answerPicked}</p>`;
+        console.log(rightAns === "correct")
+        if(rightAns === "correct"){
+            setTimeout(()=>{e.target.innerHTML += '<img class="true" src="./assets/images/tikMark-small.png">'},1000)
+            // correctAudio.play()
+            answer.style ="visibility:hidden"
+            answerPicked = " ";
+            answer="";
+        }else{
+            setTimeout(()=>{e.target.innerHTML += '<img class="false" src="./assets/images/crossMark-small.png">'},500)
+            setTimeout(()=>{e.target.innerHTML = " "},1500)
+            // wrongAudio.play()
+        }
+
     }
 }
 // Replay the task
