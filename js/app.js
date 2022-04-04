@@ -63,7 +63,7 @@ const optionClicked = (e)=>{
     rightAns =e.target.className.split(" ")[1]
     
 }
-// const correctAudio = new Audio();  
+// const correctAudio = new Audio();
 // const wrongAudio = new Audio()
 const answerClicked =(e)=>{
     if(answer){

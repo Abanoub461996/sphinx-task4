@@ -1,122 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Document</title>
 
 </head>
+
 <body>
-    <div id="loader" class="loader"></div>
-    <section id="page_wrapper">
-        <div id="page_content">
-            <div class="question">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="quest_head-text">
-                      <h1>What’s in the basket? Choose and write.</h1>
-                    </div>
-                    
-                  <div class="header-controls d-flex justify-content-around">
-                    <figure class="butn resourseBtn" onclick="showResource()">
-                      <img src="./assets/images/resourse_icon.png" alt="resourse Button" />
-                    </figure>
-            
-                    <figure class="butn pull-right helpBtn" onclick="showHelp()">
-                      <img src="assets/images/help_icon.png" alt="Help Button" />
-                    </figure>
-                  </div>
-                     
-                    
-                  </div>
-            </div>
-            <div class="content">
-                <div class="container-fluid">
-                    <!-- <div class="question_content-bg"></div> -->
-                    <div class="question_content-container">
-                      <div class="options-container">
-                        <span class="option incorrect" onclick="optionClicked(event)">scissors</span>
-                        <span class="option correct" onclick="optionClicked(event)">eraser</span>
-                        <span class="option correct" onclick="optionClicked(event)">ruler</span>
-                        <span class="option incorrect" onclick="optionClicked(event)">bag</span><br />
-                        <span class="option incorrect" onclick="optionClicked(event)">pencil case</span>
-                        <span class="option correct" onclick="optionClicked(event)">pencil</span>
-                        <span class="option correct" onclick="optionClicked(event)">book</span>
-                        <span class="option correct" onclick="optionClicked(event)">pen</span>
-                      </div>
-                      <div class="answer_container">
-                        <figure class="answers-img">
-                          <image class="img-responsive" src="assets/images/p15e11.png" />
-                        </figure>
-                        
-                        <div class="answers">
-                          <div class="">
-                            <div class="answer answer_1" onclick="answerClicked(event)"></div>
-                            <div class="answer answer_2" onclick="answerClicked(event)"></div>
-                          </div>
-                          <div class="">
-                            <div style="height:50px;"></div>
-                            <div class="answer answer_3" onclick="answerClicked(event)"></div>
-                          </div>
-                          <div class="">
-                            <div class="answer answer_4" onclick="answerClicked(event)"></div>
-                            <div class="answer answer_5" onclick="answerClicked(event)"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="controls">
-                <div class="container-fluid">
-                    <div class="row footer-controls align-items-center">
-                      <div class="col-1 controls">
-                        <figure class=" reload-btn" onclick="reset()">
-                          <img src="assets/images/replay_icon.png" alt="Redo Button" />
-                        </figure>
-                      </div>
-          
-                      <div class="offset-5 col-1 controls">
-                        <figure class="show-answers-btn" onclick="solve()">
-                          <img src="assets/images/showAns_icon.png" alt="Show Answer Button" />
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-            </div>
+  <div id="loader" class="loader"></div>
+  <section id="page_wrapper">
+    <div id="page_content">
+      <div class="question">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="quest_head-text">
+            <h1>What’s in the basket? Choose and write.</h1>
+          </div>
+
+          <div class="header-controls d-flex justify-content-around">
+            <figure class="butn resourseBtn" onclick="showResource()">
+              <img src="./assets/images/resourse_icon.png" alt="resourse Button" />
+            </figure>
+
+            <figure class="butn pull-right helpBtn" onclick="showHelp()">
+              <img src="assets/images/help_icon.png" alt="Help Button" />
+            </figure>
+          </div>
+
+
         </div>
+      </div>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="question_content-container">
+            <div class="options-container">
+              <span class="option incorrect" onclick="optionClicked(event)">scissors</span>
+              <span class="option correct" onclick="optionClicked(event)">eraser</span>
+              <span class="option correct" onclick="optionClicked(event)">ruler</span>
+              <span class="option incorrect" onclick="optionClicked(event)">bag</span><br />
+              <span class="option incorrect" onclick="optionClicked(event)">pencil case</span>
+              <span class="option correct" onclick="optionClicked(event)">pencil</span>
+              <span class="option correct" onclick="optionClicked(event)">book</span>
+              <span class="option correct" onclick="optionClicked(event)">pen</span>
+            </div>
+            <div class="answer_container">
+              <figure class="answers-img">
+                <image class="img-responsive" src="assets/images/p15e11.png" />
+              </figure>
 
-        
-  <!-- Header PopUps -->
+              <div class="answers">
+                <div class="">
+                  <div class="answer answer_1" onclick="answerClicked(event)"></div>
+                  <div class="answer answer_2" onclick="answerClicked(event)"></div>
+                </div>
+                <div class="">
+                  <div style="height:50px;"></div>
+                  <div class="answer answer_3" onclick="answerClicked(event)"></div>
+                </div>
+                <div class="">
+                  <div class="answer answer_4" onclick="answerClicked(event)"></div>
+                  <div class="answer answer_5" onclick="answerClicked(event)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="container-fluid">
+          <div class="row footer-controls align-items-center">
+            <div class="col-1 controls">
+              <figure class=" reload-btn" onclick="reset()">
+                <img src="assets/images/replay_icon.png" alt="Redo Button" />
+              </figure>
+            </div>
 
-  <div class="resourse-popup" id="resource">
-    <div class="resource-container">
-      <figure class="closeBtn" onclick="dismissResource()">
-        <img src="assets/images/close_icon.png">
-        </figure>
-      <div class="resource-content">
-        <figure class="resource-img">
-          <img src="assets/images/dummy.jpg" />
-        </figure>
-        
+            <div class="offset-5 col-1 controls">
+              <figure class="show-answers-btn" onclick="solve()">
+                <img src="assets/images/showAns_icon.png" alt="Show Answer Button" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+      <!-- Header PopUps -->
+
+      <div class="resourse-popup" id="resource">
+        <div class="resource-container">
+          <figure class="closeBtn" onclick="dismissResource()">
+            <img src="assets/images/close_icon.png">
+          </figure>
+          <div class="resource-content">
+            <figure class="resource-img">
+              <img src="assets/images/dummy.jpg" />
+            </figure>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="help-popup" id="help">
+        <div class="help-container">
+          <figure class="closeBtn" onclick="dismissHelp()">
+            <img src="assets/images/close_icon.png">
+          </figure>
+          <div class="help-content">
+            <p>Help content goes here.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="help-popup" id="help">
-    <div class="help-container">
-      <figure class="closeBtn" onclick="dismissHelp()">
-      <img src="assets/images/close_icon.png">
-      </figure>
-      <div class="help-content">
-        <p>Help content goes here.</p>
-      </div>
-    </div>
-  </div>
 
-    </section>
-    <script src ="./js/app.js"></script>
+
+
+  </section>
+  <script src="./js/app.js"></script>
 </body>
+
 </html>
