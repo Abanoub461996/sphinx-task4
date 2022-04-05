@@ -1,36 +1,34 @@
-// //web Scalable 
-// var viewportWidth =window.innerWidth;
-// console.log(viewportWidth);
-// function doResize() {
-//     console.log("resize callback")
-//     var container = document.getElementById("page_content");
+//web Scalable 
+function doResize() {
+    let container = document.getElementById("page_wrapper");
+    let content = document.getElementById("page_content")
 
-//     // var elHeight = container.offsetHeight;
-//     var elWidth = container.offsetWidth;
+    let contentWidth = content.clientWidth;
+    
+    if(contentWidth > container.offsetWidth){
+        let scale = container.clientWidth/contentWidth;
+        content.style = `transform: translateX(-50%) 
+        translateY(-50%) scale(${scale}) ;`;
+    }else{
+        content.style =`transform: translateX(-50%)
+         translateY(-50%)`
+    }
 
     
-//   var scale = elWidth / viewportWidth;
-//   container.style =`transform: translateX(-50%) translateY(-50%) scale(${scale})`
-// }
-// window.onresize =doResize;
-
-// // loader
-// window.addEventListener('load', function(){
-//     doResize()
-//     // setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-//   });
-// // User Interaction 
+}
+window.onresize =doResize;
 
 // Loader
 window.addEventListener('load', function(){
     setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-  });
+    doResize();
+
+});
 
 function removeLoader(){
     document.getElementById("loader" ).remove(); 
   }
 
-// User InterActions
 // Pop Ups
 
 const showResource = ()=>{
@@ -46,6 +44,7 @@ const showHelp = ()=>{
 const dismissHelp = ()=>{
     document.getElementById('help').style = "display:none;"
 }
+// User InterActions
 
 //  answers
 
