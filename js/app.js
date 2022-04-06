@@ -1,22 +1,22 @@
+// All times are a bit larger to clearly show the fuctionality 
+
 //web Scalable 
 function doResize() {
-    console.log("scaled")
     let content = document.getElementById("page_content")
 
-    var currentWidth = content.clientWidth;
-    var currentHeight = content.clientHeight;
+    let currentWidth = content.clientWidth;
+    let currentHeight = content.clientHeight;
 
-    var availableHeight = window.innerHeight;
-    var availableWidth = window.innerWidth;
+    let availableHeight = window.innerHeight;
+    let availableWidth = window.innerWidth;
 
-    var scaleX = availableWidth / currentWidth;
-    var scaleY = availableHeight / currentHeight;
-    console.log(currentWidth,currentHeight , availableWidth, availableHeight)
+    let scaleX = availableWidth / currentWidth;
+    let scaleY = availableHeight / currentHeight;
     scaleX = Math.min( scaleX, scaleY);
     scaleY = scaleX;
 
-    var translationX = Math.round((availableWidth - (currentWidth * scaleX)) / 2);
-  var styles = {
+    let translationX = Math.round((availableWidth - (currentWidth * scaleX)) / 2);
+  let styles = {
     
     "-webkit-transform": "translate(" + translationX + "px) scale3d("
                                       + scaleX + ", " + scaleY + ", 1)",
@@ -66,7 +66,7 @@ const optionClicked = (e)=>{
     if(answer){
         answer.style="background-color: white"; 
     }
-    e.target.style ="background-color:#0fa0c5;"
+    e.target.style ="background-color:#0fa0c5; color:white;"
     answer =e.target;
     answerPicked = e.target.innerHTML;
     rightAns =e.target.className.split(" ")[1]
@@ -76,9 +76,8 @@ const optionClicked = (e)=>{
 const answerClicked =(e)=>{
     if(answer){
         e.target.innerHTML = `<p>${answerPicked}</p>`;
-        console.log(rightAns === "correct")
         if(rightAns === "correct"){
-            setTimeout(()=>{e.target.innerHTML += '<img class="true" src="./assets/images/tikMark-small.png">'},1000)
+            setTimeout(()=>{e.target.innerHTML += '<img class="true" src="./assets/images/tikMark-small.png">'},500)
             answer.style ="visibility:hidden"
             answerPicked = " ";
             answer="";
